@@ -1,0 +1,6 @@
+{
+  "name": "Lemonade Cosmetics - Trang Điểm Chuẩn Gu Việt",
+  "description": "Trang web thương hiệu mỹ phẩm Lemonade Cosmetics - Giải pháp trang điểm tiện lợi, đa năng chuẩn phong cách cho phụ nữ Việt sáng lập bởi Quách Ánh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

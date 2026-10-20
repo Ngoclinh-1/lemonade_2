@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lemonade Cosmetics - Trang Điểm Chuẩn Gu Việt</title>
+    <meta name="description" content="Trang web thương hiệu mỹ phẩm Lemonade Cosmetics - Giải pháp trang điểm tiện lợi, đa năng chuẩn phong cách cho phụ nữ Việt sáng lập bởi Quách Ánh." />
+    <meta property="og:title" content="Lemonade Cosmetics - Trang Điểm Chuẩn Gu Việt" />
+    <meta property="og:description" content="Trang web thương hiệu mỹ phẩm Lemonade Cosmetics - Giải pháp trang điểm tiện lợi, đa năng chuẩn phong cách cho phụ nữ Việt sáng lập bởi Quách Ánh." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN (Hoạt động độc lập 100% trên GitHub Pages / Offline) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+              display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              lemon: {
+                DEFAULT: '#FFE500',
+                50: '#FFFDF0',
+                100: '#FFFAC2',
+                200: '#FFF58A',
+                300: '#FFE84D',
+                400: '#FFE500',
+                500: '#E6CE00',
+                600: '#B8A400',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      }
+      .font-display {
+        font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-[#FFFDF7] text-neutral-900 font-sans antialiased selection:bg-[#FFE500] selection:text-black">
+    <div id="root">
+      
+      <!-- Top Notification Bar -->
+      <div class="bg-[#FFE500] text-black text-xs font-semibold py-1.5 px-4 text-center flex items-center justify-center gap-2">
+        <span>✨ Mừng hè rực rỡ: Nhập mã <strong class="underline font-bold">LEMON10</strong> giảm thêm 10% toàn bộ đơn hàng!</span>
+        <button onclick="copyVoucher('LEMON10')" class="ml-2 text-[10px] bg-black text-white px-2 py-0.5 rounded uppercase tracking-wide hover:bg-neutral-800 transition">
+          Sao chép mã
+        </button>
+      </div>
+
+      <!-- Header & Navigation -->
+      <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-100 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16 gap-8">
+            <a href="#hero" class="text-2xl sm:text-3xl font-black tracking-widest text-neutral-900 uppercase font-display flex items-center gap-1.5">
+              <span>LEM<span class="text-[#F5B800]">O</span>NADE</span>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-neutral-700">
+              <a href="#catalog" class="hover:text-black transition-colors whitespace-nowrap">Sản phẩm</a>
+              <a href="#membership" class="hover:text-black transition-colors whitespace-nowrap">Ưu đãi &amp; Membership</a>
+              <a href="#why-choose" class="hover:text-black transition-colors whitespace-nowrap">Vì sao chọn Lemonade</a>
+              <a href="#testimonials" class="hover:text-black transition-colors whitespace-nowrap">Khách hàng đánh giá</a>
+              <a href="#consultation" class="hover:text-black transition-colors whitespace-nowrap">Nhận tư vấn</a>
+              <a href="#policy" class="hover:text-black transition-colors whitespace-nowrap">Chính sách</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+              <a href="#consultation" class="px-5 py-2.5 text-sm font-bold text-black bg-[#FFE500] hover:bg-[#F3DC00] rounded-lg shadow-sm transition whitespace-nowrap">
+                Mua ngay
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- SECTION 1: HERO BANNER (Picture1.png) -->
+      <section id="hero" class="relative overflow-hidden bg-gradient-to-br from-[#FFF58A] via-[#FFE84D] to-[#FFDB1A]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Left: Model Image -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-start">
+              <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] max-w-sm w-full bg-amber-100">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+                  alt="Người mẫu trang điểm lông mày cùng Lemonade Dual Eyebrow"
+                  class="w-full h-full object-cover"
+                  crossorigin="anonymous"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-xl shadow-md flex items-center justify-between">
+                  <span class="text-xs font-bold text-neutral-800">Dual Eyebrow #02 Natural Brown</span>
+                  <span class="text-xs font-black text-amber-600">127.000₫</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Content -->
+            <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-5">
+              <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFE342] border border-neutral-900/10 shadow-sm text-neutral-900 font-bold text-xs uppercase tracking-wider">
+                <span>★ NEW ARRIVAL</span>
+              </div>
+              <div class="space-y-1">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-neutral-900 tracking-tight leading-tight uppercase font-display">
+                  BÍ KÍP &quot;NÂNG CẤP&quot; LAYOUT
+                </h1>
+                <p class="text-lg sm:text-2xl font-extrabold text-neutral-800 tracking-wide uppercase">
+                  VỚI HÀNG LÔNG MÀY CHUẨN TONE
+                </p>
+              </div>
+              <div class="text-base sm:text-lg font-bold text-neutral-800 border-b-2 border-neutral-900/15 pb-2">
+                Lemonade Dual Eyebrow
+              </div>
+
+              <!-- 2 Feature Columns -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-left w-full max-w-xl">
+                <div class="bg-white/75 p-4 rounded-xl border border-white/60 shadow-sm">
+                  <strong class="text-neutral-900 font-bold block mb-1">Đầu chì dẹt siêu mảnh:</strong>
+                  <p class="text-xs sm:text-sm text-neutral-800 leading-relaxed">
+                    Chất chì mềm mại, độ cứng vừa phải dễ dàng thao tác định hình từng sợi lông mày tự nhiên.
+                  </p>
+                </div>
+                <div class="bg-white/75 p-4 rounded-xl border border-white/60 shadow-sm">
+                  <strong class="text-neutral-900 font-bold block mb-1">Đầu cọ chải mềm:</strong>
+                  <p class="text-xs sm:text-sm text-neutral-800 leading-relaxed">
+                    Giúp đưa các sợi lông mày vào nếp gọn gàng, tán đều màu chì cho hàng mày mềm mại tự nhiên.
+                  </p>
+                </div>
+              </div>
+
+              <div class="pt-2 flex flex-wrap gap-3">
+                <a href="#catalog" class="inline-block px-8 py-3.5 bg-[#FFDB1A] hover:bg-[#F2CD00] text-black font-extrabold text-sm sm:text-base rounded-full shadow-lg border-2 border-neutral-900/10 transition">
+                  KHÁM PHÁ NGAY →
+                </a>
+                <a href="#consultation" class="inline-block px-6 py-3.5 bg-white/80 hover:bg-white text-neutral-900 font-bold text-sm sm:text-base rounded-full shadow-sm border border-neutral-900/10 transition">
+                  Tư vấn chọn tone màu
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: STATS STRIP (Picture8.png) -->
+      <section class="relative overflow-hidden py-14 sm:py-20 bg-amber-50">
+        <div class="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=1200&q=80"
+            alt="Lemonade Cosmetics flatlay cam chanh tươi mát"
+            class="w-full h-full object-cover"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+          />
+          <div class="absolute inset-0 bg-amber-100/75 backdrop-blur-[2px]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 items-center justify-center">
+            
+            <div class="flex flex-col items-center justify-center text-center">
+              <div class="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full bg-white/90 backdrop-blur-md border-4 border-neutral-400/40 shadow-xl flex flex-col items-center justify-center p-4">
+                <span class="text-2xl sm:text-4xl font-black text-neutral-900 font-display">500+</span>
+                <span class="text-[11px] sm:text-xs text-neutral-800 font-medium leading-snug mt-1 max-w-[140px]">
+                  điểm bán và cửa hàng trên toàn quốc.
+                </span>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center text-center">
+              <div class="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full bg-white/90 backdrop-blur-md border-4 border-neutral-400/40 shadow-xl flex flex-col items-center justify-center p-4">
+                <span class="text-2xl sm:text-4xl font-black text-neutral-900 font-display">20+</span>
+                <span class="text-[11px] sm:text-xs text-neutral-800 font-medium leading-snug mt-1 max-w-[140px]">
+                  dòng sản phẩm trang điểm chuyên sâu.
+                </span>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center text-center">
+              <div class="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full bg-white/90 backdrop-blur-md border-4 border-neutral-400/40 shadow-xl flex flex-col items-center justify-center p-4">
+                <span class="text-2xl sm:text-4xl font-black text-neutral-900 font-display">#1</span>
+                <span class="text-[11px] sm:text-xs text-neutral-800 font-medium leading-snug mt-1 max-w-[140px]">
+                  thương hiệu cushion Việt dẫn đầu sàn TMĐT
+                </span>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center text-center">
+              <div class="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full bg-white/90 backdrop-blur-md border-4 border-neutral-400/40 shadow-xl flex flex-col items-center justify-center p-4">
+                <span class="text-2xl sm:text-4xl font-black text-neutral-900 font-display">100%</span>
+                <span class="text-[11px] sm:text-xs text-neutral-800 font-medium leading-snug mt-1 max-w-[140px]">
+                  sản phẩm đạt tiêu chuẩn thuần chay, an toàn cho da.
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: MEMBERSHIP & CATALOG (Picture2.png) -->
+      <section id="membership" class="py-12 lg:py-16 bg-[#FFFDF5]">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- LEFT COLUMN: Yellow Membership & Voucher Area -->
+            <div class="lg:col-span-4 bg-[#FFE500] rounded-3xl p-5 sm:p-7 shadow-xl border-2 border-amber-300 flex flex-col space-y-6">
+              
+              <div class="space-y-3">
+                <h3 class="text-xs font-black tracking-wider text-neutral-900 uppercase">
+                  🎟 VOUCHER ĐỘC QUYỀN HÔM NAY
+                </h3>
+                <div class="grid grid-cols-3 gap-2">
+                  <div onclick="copyVoucher('LEMON10')" class="bg-white rounded-xl p-2.5 text-center shadow-sm border border-amber-300 cursor-pointer hover:shadow transition">
+                    <div class="text-[10px] font-bold text-neutral-600">VOUCHER GIẢM THÊM</div>
+                    <div class="text-base font-black text-rose-600 my-1 font-display">10%</div>
+                    <div class="text-[9px] font-semibold text-neutral-700 bg-amber-100 rounded py-0.5">TOÀN CỬA HÀNG</div>
+                  </div>
+                  <div onclick="copyVoucher('FREESHIP')" class="bg-white rounded-xl p-2.5 text-center shadow-sm border border-amber-300 cursor-pointer hover:shadow transition">
+                    <div class="text-[10px] font-bold text-neutral-600">VOUCHER</div>
+                    <div class="text-lg my-0.5">🚚</div>
+                    <div class="text-[9px] font-semibold text-neutral-700 bg-emerald-100 rounded py-0.5">MIỄN PHÍ VẬN CHUYỂN</div>
+                  </div>
+                  <div onclick="copyVoucher('BIRTHDAY15')" class="bg-white rounded-xl p-2.5 text-center shadow-sm border border-amber-300 cursor-pointer hover:shadow transition">
+                    <div class="text-[10px] font-bold text-neutral-600">VOUCHER</div>
+                    <div class="text-lg my-0.5">🎂</div>
+                    <div class="text-[9px] font-semibold text-neutral-700 bg-pink-100 rounded py-0.5">MỪNG SINH NHẬT GIẢM 15%</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Membership summary note -->
+              <div class="bg-white/95 rounded-2xl p-4 shadow-sm border border-amber-200">
+                <div class="text-center pb-2 border-b border-neutral-100">
+                  <h2 class="text-xl sm:text-2xl font-black text-neutral-900 font-display uppercase">
+                    MEMBERSHIP LEVEL
+                  </h2>
+                  <p class="text-[10px] text-neutral-500 italic mt-1">
+                    *Ưu đãi được tự động trích đơn hàng và được áp dụng song song các chương trình khuyến mại đang diễn ra.
+                  </p>
+                </div>
+                <div class="space-y-2 mt-3 text-xs">
+                  <div class="flex justify-between font-semibold text-neutral-800">
+                    <span>★ Member:</span>
+                    <span class="text-neutral-500">Chưa có ưu đãi</span>
+                  </div>
+                  <div class="flex justify-between font-semibold text-neutral-800">
+                    <span>★ Silver (15 điểm ~ 1,5tr):</span>
+                    <span class="text-amber-700 font-bold">Giảm 5%</span>
+                  </div>
+                  <div class="flex justify-between font-semibold text-neutral-800">
+                    <span>★ Gold (30 điểm ~ 3tr):</span>
+                    <span class="text-amber-700 font-bold">Giảm 7%</span>
+                  </div>
+                  <div class="flex justify-between font-semibold text-neutral-800">
+                    <span>★ Platinum (60 điểm ~ 6tr):</span>
+                    <span class="text-amber-700 font-bold">Giảm 10%</span>
+                  </div>
+                  <div class="flex justify-between font-semibold text-neutral-800">
+                    <span>★ Diamond (150 điểm ~ 15tr):</span>
+                    <span class="text-amber-700 font-bold">Giảm 15%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5 Tier Cards from Picture2 -->
+              <div class="space-y-2.5">
+                <div class="bg-white rounded-2xl p-3 shadow-sm flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-neutral-100 border border-neutral-300 flex flex-col items-center justify-center text-[8px] font-bold">
+                    <span>★</span><span>MEMBER</span>
+                  </div>
+                  <div class="flex-1 text-xs text-neutral-800">
+                    Chỉ cần phát sinh đơn hàng và được tích điểm
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-3 shadow-sm flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-slate-200 border border-slate-300 text-slate-800 flex flex-col items-center justify-center text-[8px] font-bold">
+                    <span>★</span><span>SILVER</span>
+                  </div>
+                  <div class="flex-1 text-xs text-neutral-800">
+                    Tích lũy đạt 15 điểm - tương đương 1,5 triệu (Giảm 5%)
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-3 shadow-sm flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-amber-200 border border-amber-300 text-amber-900 flex flex-col items-center justify-center text-[8px] font-bold">
+                    <span>★</span><span>GOLD</span>
+                  </div>
+                  <div class="flex-1 text-xs text-neutral-800">
+                    Tích lũy đạt 30 điểm - tương đương 3 triệu (Giảm 7%)
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-3 shadow-sm flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-neutral-900 text-white flex flex-col items-center justify-center text-[8px] font-bold">
+                    <span>★</span><span>PLATINUM</span>
+                  </div>
+                  <div class="flex-1 text-xs text-neutral-800">
+                    Tích lũy đạt 60 điểm - tương đương 6 triệu (Giảm 10%)
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-3 shadow-sm flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-r from-amber-700 to-amber-900 text-white flex flex-col items-center justify-center text-[8px] font-bold">
+                    <span>★</span><span>DIAMOND</span>
+                  </div>
+                  <div class="flex-1 text-xs text-neutral-800">
+                    Tích lũy đạt 150 điểm - tương đương 15 triệu (Giảm 15%)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Products Grid & Summer Banner -->
+            <div class="lg:col-span-8 flex flex-col space-y-8" id="catalog">
+              
+              <!-- Top Row 4 Products -->
+              <div class="space-y-3">
+                <h3 class="text-lg font-black text-neutral-900 font-display">Bộ Sưu Tập Nổi Bật</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  <!-- Product 1 -->
+                  <div class="bg-white rounded-2xl p-3 border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-neutral-100 mb-2">
+                      <img src="https://images.unsplash.com/photo-1597225244660-1cd128c64284?auto=format&fit=crop&w=600&q=80" alt="Chì kẻ mày Dual Eyebrow" class="w-full h-full object-cover" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    </div>
+                    <h4 class="text-xs font-bold text-neutral-900 h-8 leading-tight">Dual Eyebrow Chì Kẻ Mày 2 Đầu</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <span class="text-sm font-black text-neutral-900 font-display">127.000₫</span>
+                      <a href="#consultation" class="text-[11px] bg-[#FFE500] px-2.5 py-1 rounded font-bold hover:bg-[#F3DC00]">Mua</a>
+                    </div>
+                  </div>
+
+                  <!-- Product 2 -->
+                  <div class="bg-white rounded-2xl p-3 border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-neutral-100 mb-2">
+                      <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=600&q=80" alt="Combo Chì Mày & Mascara" class="w-full h-full object-cover" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    </div>
+                    <h4 class="text-xs font-bold text-neutral-900 h-8 leading-tight">Combo Chì Mày &amp; Mascara Fixer</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <span class="text-sm font-black text-neutral-900 font-display">169.000₫</span>
+                      <a href="#consultation" class="text-[11px] bg-[#FFE500] px-2.5 py-1 rounded font-bold hover:bg-[#F3DC00]">Mua</a>
+                    </div>
+                  </div>
+
+                  <!-- Product 3 -->
+                  <div class="bg-white rounded-2xl p-3 border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-neutral-100 mb-2">
+                      <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=600&q=80" alt="Son Kem Lì Matte Addict" class="w-full h-full object-cover" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    </div>
+                    <h4 class="text-xs font-bold text-neutral-900 h-8 leading-tight">Son Kem Lì Matte Addict Lip</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <span class="text-sm font-black text-neutral-900 font-display">407.000₫</span>
+                      <a href="#consultation" class="text-[11px] bg-[#FFE500] px-2.5 py-1 rounded font-bold hover:bg-[#F3DC00]">Mua</a>
+                    </div>
+                  </div>
+
+                  <!-- Product 4 -->
+                  <div class="bg-white rounded-2xl p-3 border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-neutral-100 mb-2">
+                      <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=600&q=80" alt="Má Hồng Cushion Mirror Mirror" class="w-full h-full object-cover" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    </div>
+                    <h4 class="text-xs font-bold text-neutral-900 h-8 leading-tight">Má Hồng Mirror Mirror Cushion</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <span class="text-sm font-black text-neutral-900 font-display">242.000₫</span>
+                      <a href="#consultation" class="text-[11px] bg-[#FFE500] px-2.5 py-1 rounded font-bold hover:bg-[#F3DC00]">Mua</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Summer Campaign Banner (Picture2) -->
+              <div class="relative rounded-3xl overflow-hidden shadow-xl border border-neutral-200 h-64 sm:h-72">
+                <img
+                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80"
+                  alt="Summer Makeup Collection Lemonade"
+                  class="w-full h-full object-cover"
+                  crossorigin="anonymous"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent p-6 sm:p-8 flex flex-col justify-between max-w-lg">
+                  <div>
+                    <span class="text-xs font-bold text-amber-700 uppercase bg-amber-100 px-2.5 py-1 rounded">Summer Vibes</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-neutral-900 mt-2 font-display">
+                      LAYOUT <span class="italic font-normal text-rose-500 font-serif">Chuẩn gu</span>
+                      <br>Vi vu <span class="text-sky-600">MÙA HÈ</span>
+                    </h2>
+                  </div>
+                  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 my-2 text-[10px] font-bold text-center">
+                    <span class="bg-rose-50 border border-rose-200 text-rose-700 py-1 rounded">VOUCHER ĐỘC QUYỀN</span>
+                    <span class="bg-amber-50 border border-amber-200 text-amber-800 py-1 rounded">GIẢM ĐẾN 50%</span>
+                    <span class="bg-purple-50 border border-purple-200 text-purple-700 py-1 rounded">MUA LÀ CÓ QUÀ</span>
+                    <span class="bg-emerald-50 border border-emerald-200 text-emerald-700 py-1 rounded">FREESHIP MỌI ĐƠN</span>
+                  </div>
+                  <div>
+                    <a href="#consultation" class="inline-block px-6 py-2.5 bg-gradient-to-r from-rose-500 to-pink-500 text-white font-extrabold text-xs sm:text-sm rounded-full shadow hover:opacity-95">
+                      MUA NGAY
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 8 Catalog Products Grid (Picture2 Bottom) -->
+              <div class="space-y-4">
+                <h3 class="text-xl font-black text-neutral-900 font-display">Danh Mục Sản Phẩm</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  <!-- P1: Supermatte Cushion -->
+                  <div class="bg-white rounded-2xl p-3 border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-neutral-100 mb-2">
+                      <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=600&q=80" alt="Supermatte Cushion" class="w-full h-full object-cover" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    </div>
+                    <span class="text-[9px] font-bold text-amber-700 uppercase">CUSHION</span>
+                    <h4 class="text-xs font-bold text-neutral-900 h-8 leading-tight">Supermatte Cushion SPF50+</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <span class="text-sm font-black text-neutral-900 font-display">365.000₫</span>
+                      <a href="#consultation" class="text-[11px] bg-[#FFE500] px-2.5 py-1 rounded font-bold hover:bg-[#F3DC00]">Mua</a>
+                    </div>
+                  </div>
+
+                  <!-- P2: Loose Powder -->
+                  <div class="bg-white rounded-2xl p-3 border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-neutral-100 mb-2">
+                      <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="Supermatte Loose Powder" class="w-full h-full object-cover" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    </div>
+                    <span class="text-[9px] font-bold text-amber-700 uppercase">PHẤN PHỦ</span>
+                    <h4 class="text-xs font-bold text-neutral-900 h-8 leading-tight">Supermatte Loose Powder</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <span class="text-sm font-black text-neutral-900 font-display">209.000₫</span>
+                      <a href="#consultation" class="text-[11px] bg-[#FFE500] px-2.5 py-1 rounded font-bold hover:bg-[#F3DC00]">Mua</a>
+                    </div>
+                  </div>
+
+                  <!-- P3: Soaring Mascara -->
+                  <div class="bg-white rounded-2xl p-3 border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-neutral-100 mb-2">
+                      <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=600&q=80" alt="Soaring Mascara & Eyeliner" class="w-full h-full object-cover" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    </div>
+                    <span class="text-[9px] font-bold text-amber-700 uppercase">MẮT & MI</span>
+                    <h4 class="text-xs font-bold text-neutral-900 h-8 leading-tight">Bộ Đôi Soaring Mascara &amp; Liner</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <span class="text-sm font-black text-neutral-900 font-display">227.000₫</span>
+                      <a href="#consultation" class="text-[11px] bg-[#FFE500] px-2.5 py-1 rounded font-bold hover:bg-[#F3DC00]">Mua</a>
+                    </div>
+                  </div>
+
+                  <!-- P4: Aesthetic Eyeshadow -->
+                  <div class="bg-white rounded-2xl p-3 border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-neutral-100 mb-2">
+                      <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80" alt="Aesthetic Eyeshadow Palette" class="w-full h-full object-cover" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    </div>
+                    <span class="text-[9px] font-bold text-amber-700 uppercase">PHẤN MẮT</span>
+                    <h4 class="text-xs font-bold text-neutral-900 h-8 leading-tight">Bảng Mắt 16 Ô Aesthetic Palette</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <span class="text-sm font-black text-neutral-900 font-display">332.000₫</span>
+                      <a href="#consultation" class="text-[11px] bg-[#FFE500] px-2.5 py-1 rounded font-bold hover:bg-[#F3DC00]">Mua</a>
+                    </div>
+                  </div>
+
+                  <!-- P5: Tinted Lip Balm -->
+                  <div class="bg-white rounded-2xl p-3 border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-neutral-100 mb-2">
+                      <img src="https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?auto=format&fit=crop&w=600&q=80" alt="Tinted Lip Balm" class="w-full h-full object-cover" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    </div>
+                    <span class="text-[9px] font-bold text-amber-700 uppercase">SON DƯỠNG</span>
+                    <h4 class="text-xs font-bold text-neutral-900 h-8 leading-tight">Son Dưỡng Tinted Lip Balm</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <span class="text-sm font-black text-neutral-900 font-display">218.000₫</span>
+                      <a href="#consultation" class="text-[11px] bg-[#FFE500] px-2.5 py-1 rounded font-bold hover:bg-[#F3DC00]">Mua</a>
+                    </div>
+                  </div>
+
+                  <!-- P6: Combo Cushion + Refill -->
+                  <div class="bg-white rounded-2xl p-3 border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-neutral-100 mb-2">
+                      <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=600&q=80" alt="Combo Cushion Refill" class="w-full h-full object-cover" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    </div>
+                    <span class="text-[9px] font-bold text-amber-700 uppercase">COMBO TIẾT KIỆM</span>
+                    <h4 class="text-xs font-bold text-neutral-900 h-8 leading-tight">Supermatte Cushion + Refill</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <span class="text-sm font-black text-neutral-900 font-display">506.000₫</span>
+                      <a href="#consultation" class="text-[11px] bg-[#FFE500] px-2.5 py-1 rounded font-bold hover:bg-[#F3DC00]">Mua</a>
+                    </div>
+                  </div>
+
+                  <!-- P7: Mascara Cong Mi -->
+                  <div class="bg-white rounded-2xl p-3 border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-neutral-100 mb-2">
+                      <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=600&q=80" alt="Mascara Dài Cong Mi" class="w-full h-full object-cover" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    </div>
+                    <span class="text-[9px] font-bold text-amber-700 uppercase">CHUỐT MI</span>
+                    <h4 class="text-xs font-bold text-neutral-900 h-8 leading-tight">Mascara Uốn Cong Dài Mi</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <span class="text-sm font-black text-neutral-900 font-display">189.000₫</span>
+                      <a href="#consultation" class="text-[11px] bg-[#FFE500] px-2.5 py-1 rounded font-bold hover:bg-[#F3DC00]">Mua</a>
+                    </div>
+                  </div>
+
+                  <!-- P8: Concealer 2 Đầu -->
+                  <div class="bg-white rounded-2xl p-3 border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-neutral-100 mb-2">
+                      <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="Che Khuyết Điểm 2 Đầu" class="w-full h-full object-cover" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    </div>
+                    <span class="text-[9px] font-bold text-amber-700 uppercase">CHE KHUYẾT ĐIỂM</span>
+                    <h4 class="text-xs font-bold text-neutral-900 h-8 leading-tight">Matte Concealer 2 Đầu Tiện Lợi</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <span class="text-sm font-black text-neutral-900 font-display">169.000₫</span>
+                      <a href="#consultation" class="text-[11px] bg-[#FFE500] px-2.5 py-1 rounded font-bold hover:bg-[#F3DC00]">Mua</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: WHY CUSTOMERS CHOOSE LEMONADE (Picture3.png) -->
+      <section id="why-choose" class="py-16 sm:py-20 bg-[#FDF1F3]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-neutral-900 font-display uppercase">
+              VÌ SAO KHÁCH HÀNG TIN TƯỞNG CHỌN LEMONADE
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div class="bg-white/90 p-5 rounded-2xl border border-pink-200 shadow-sm">
+                <div class="text-3xl text-sky-300 font-serif leading-none mb-2">“</div>
+                <h3 class="text-sm font-black text-neutral-900 mb-1">Thấu hiểu làn da và khí hậu Việt Nam:</h3>
+                <p class="text-xs text-neutral-700 leading-relaxed">
+                  Thương hiệu do chuyên gia trang điểm Quách Ánh sáng lập, nghiên cứu và thiết kế các sản phẩm chuyên biệt phù hợp với tone màu da, đặc điểm làn da và khí hậu nóng ẩm của phụ nữ Việt.
+                </p>
+              </div>
+
+              <div class="bg-white/90 p-5 rounded-2xl border border-pink-200 shadow-sm">
+                <div class="text-3xl text-sky-300 font-serif leading-none mb-2">“</div>
+                <h3 class="text-sm font-black text-neutral-900 mb-1">Sản phẩm đa năng, tối giản hóa việc trang điểm:</h3>
+                <p class="text-xs text-neutral-700 leading-relaxed">
+                  Các dòng sản phẩm tích hợp công nghệ hiện đại từ Hàn Quốc thường mang tính năng 2-in-1 hoặc 3-in-1 (như cushion kèm gương, son kết hợp, chì kẻ mày đa năng) giúp đơn giản hóa quy trình làm đẹp, dễ sử dụng và dễ mang theo.
+                </p>
+              </div>
+
+              <div class="bg-white/90 p-5 rounded-2xl border border-pink-200 shadow-sm">
+                <div class="text-3xl text-sky-300 font-serif leading-none mb-2">“</div>
+                <h3 class="text-sm font-black text-neutral-900 mb-1">Chất lượng đạt chuẩn và an toàn:</h3>
+                <p class="text-xs text-neutral-700 leading-relaxed">
+                  Sản phẩm đạt tiêu chuẩn thuần chay, không thử nghiệm trên động vật (PETA Cruelty-Free) và đã giành nhiều giải thưởng lớn như Best Domestic Cushion hay Best Domestic Eyebrow Pencil từ các tạp chí làm đẹp uy tín.
+                </p>
+              </div>
+
+              <div class="bg-white/90 p-5 rounded-2xl border border-pink-200 shadow-sm">
+                <div class="text-3xl text-sky-300 font-serif leading-none mb-2">“</div>
+                <h3 class="text-sm font-black text-neutral-900 mb-1">Giá thành hợp lý:</h3>
+                <p class="text-xs text-neutral-700 leading-relaxed">
+                  Mức giá dao động từ 170.000 – 500.000 VNĐ, phù hợp với túi tiền của học sinh, sinh viên và dân văn phòng, cạnh tranh tốt hơn 20–30% so với nhiều dòng ngoại nhập.
+                </p>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 flex justify-center">
+              <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] max-w-sm w-full bg-pink-100">
+                <img
+                  src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80"
+                  alt="Nhóm phụ nữ Việt rạng rỡ cùng mỹ phẩm Lemonade"
+                  class="w-full h-full object-cover"
+                  crossorigin="anonymous"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: CUSTOMER TESTIMONIALS (Picture4.png) -->
+      <section id="testimonials" class="py-16 sm:py-24 bg-gradient-to-b from-[#FFFDF7] via-[#FFF8D6] to-[#FFFDF7]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-neutral-900 font-display tracking-tight uppercase">
+              KHÁCH HÀNG NÓI GÌ VỀ LEMONADE
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 max-w-5xl mx-auto">
+            <!-- Arched Card 1: Châu Bùi -->
+            <div class="flex flex-col items-center text-center bg-white/70 p-6 sm:p-8 rounded-3xl border border-amber-200 shadow-lg">
+              <div class="w-56 h-72 sm:w-64 sm:h-80 rounded-t-[120px] rounded-b-2xl overflow-hidden shadow-md border-4 border-white mb-6 bg-neutral-200">
+                <img
+                  src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80"
+                  alt="Châu Bùi"
+                  class="w-full h-full object-cover object-top"
+                  crossorigin="anonymous"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <p class="text-xs sm:text-sm text-neutral-800 leading-relaxed italic max-w-md font-medium">
+                &ldquo;Các dòng sản phẩm của Lemonade mang tính ứng dụng rất cao nhưng vẫn giữ được chất 'thời trang' và cá tính. Sự nhỏ gọn, tích hợp nhiều công dụng là điểm cộng lớn nhất giúp cô dễ dàng mang theo khi đi fashion week hay lịch trình bận rộn.&rdquo;
+              </p>
+              <div class="mt-4 pt-2 border-t border-amber-200 w-full">
+                <h4 class="text-base font-black text-neutral-900">Châu Bùi</h4>
+              </div>
+            </div>
+
+            <!-- Arched Card 2: Ca sĩ Đào Bá Lộc -->
+            <div class="flex flex-col items-center text-center bg-white/70 p-6 sm:p-8 rounded-3xl border border-amber-200 shadow-lg">
+              <div class="w-56 h-72 sm:w-64 sm:h-80 rounded-t-[120px] rounded-b-2xl overflow-hidden shadow-md border-4 border-white mb-6 bg-neutral-200">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
+                  alt="Ca sĩ Đào Bá Lộc"
+                  class="w-full h-full object-cover"
+                  crossorigin="anonymous"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <p class="text-xs sm:text-sm text-neutral-800 leading-relaxed italic max-w-md font-medium">
+                &ldquo;Nam ca sĩ cực kỳ ấn tượng với chất son lì nhưng không gây khô môi, đặc biệt là bảng màu được tính toán rất kỹ, cực kỳ tôn men răng và phù hợp với sắc tố da của người Việt Nam.&rdquo;
+              </p>
+              <div class="mt-4 pt-2 border-t border-amber-200 w-full">
+                <h4 class="text-base font-black text-neutral-900">Ca sĩ: Đào Bá Lộc</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: CONSULTATION & COUNTDOWN TIMER (Picture6.png) -->
+      <section id="consultation" class="py-14 sm:py-20 bg-gradient-to-br from-[#FFF9D6] via-[#FFF3B8] to-[#FFE885]">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Top Campaign Banners from Picture6 -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-8">
+            <div class="md:col-span-3 bg-pink-100 rounded-2xl p-4 border border-rose-200 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-black uppercase text-neutral-700">LEMONADE</span>
+                <h4 class="text-sm font-black text-rose-600 uppercase font-display">Mirror Mirror Collection</h4>
+              </div>
+              <div class="w-14 h-14 rounded-lg overflow-hidden shrink-0">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=200&q=80" alt="Mirror Mirror" class="w-full h-full object-cover" crossorigin="anonymous" referrerpolicy="no-referrer">
+              </div>
+            </div>
+
+            <div class="md:col-span-5 bg-white rounded-2xl p-3 border border-amber-300">
+              <div class="grid grid-cols-4 gap-2 text-center">
+                <div class="bg-amber-100 rounded-xl p-1.5"><span class="text-[10px] font-bold block">MUA 1</span><span class="text-xs font-black text-rose-600 block">TẶNG 2</span></div>
+                <div class="bg-amber-100 rounded-xl p-1.5"><span class="text-[10px] font-bold block">MUA 1</span><span class="text-xs font-black text-rose-600 block">TẶNG 1</span></div>
+                <div class="bg-amber-100 rounded-xl p-1.5"><span class="text-[10px] font-bold block">DEAL</span><span class="text-xs font-black text-rose-600 block">GIỚI HẠN</span></div>
+                <div class="bg-amber-100 rounded-xl p-1.5"><span class="text-[10px] font-bold block">GIẢM 15%</span><span class="text-[9px] block">CÒN LẠI</span></div>
+              </div>
+            </div>
+
+            <div class="md:col-span-4 bg-gradient-to-r from-red-600 to-rose-700 text-white rounded-2xl p-4 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-bold uppercase text-amber-200">LEMONADE</span>
+                <h4 class="text-sm font-black uppercase font-display">Tự Hào Mỹ Phẩm Việt</h4>
+                <p class="text-[11px] text-rose-100">Giải pháp trang điểm dễ dàng cho người Việt</p>
+              </div>
+              <div class="text-2xl text-[#FFE500]">★</div>
+            </div>
+          </div>
+
+          <!-- Form & Countdown Split -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white/80 backdrop-blur-md rounded-3xl p-6 sm:p-10 border-2 border-amber-300 shadow-2xl">
+            <div class="lg:col-span-4 flex justify-center">
+              <div class="rounded-2xl overflow-hidden shadow-xl border-4 border-white aspect-[3/4] max-w-xs w-full bg-amber-100">
+                <img
+                  src="https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?auto=format&fit=crop&w=600&q=80"
+                  alt="Aesthetic Palette Model"
+                  class="w-full h-full object-cover"
+                  crossorigin="anonymous"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:col-span-5">
+              <h3 class="text-2xl font-black text-neutral-900 font-display mb-1">
+                Nhận tư vấn sản phẩm
+              </h3>
+              <p class="text-xs text-neutral-600 mb-4">
+                Chuyên viên Lemonade sẽ liên hệ hỗ trợ bạn chọn đúng tone màu và nhận quà tặng.
+              </p>
+              <form class="space-y-3" onsubmit="handleFormSubmit(event)">
+                <div>
+                  <label class="block text-xs font-bold text-neutral-800 mb-1">Họ và tên</label>
+                  <input type="text" id="custName" placeholder="Nhập họ và tên" required class="w-full px-4 py-2 rounded-xl bg-white border border-neutral-300 text-xs outline-none focus:border-amber-500">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-neutral-800 mb-1">Số điện thoại</label>
+                  <input type="tel" id="custPhone" placeholder="Nhập số điện thoại" required class="w-full px-4 py-2 rounded-xl bg-white border border-neutral-300 text-xs outline-none focus:border-amber-500">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-neutral-800 mb-1">Email</label>
+                  <input type="email" placeholder="Nhập email" class="w-full px-4 py-2 rounded-xl bg-white border border-neutral-300 text-xs outline-none focus:border-amber-500">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-neutral-800 mb-1">Chọn sản phẩm</label>
+                  <select class="w-full px-4 py-2 rounded-xl bg-white border border-neutral-300 text-xs outline-none focus:border-amber-500">
+                    <option>Lemonade Dual Eyebrow Chì Kẻ Mày 2 Đầu</option>
+                    <option>Supermatte Cushion Kiềm Dầu SPF50+</option>
+                    <option>Má Hồng Mirror Mirror Blush Cushion</option>
+                    <option>Son Kem Lì Matte Addict Dual Lipstick</option>
+                    <option>Bảng Phấn Mắt 16 Ô Aesthetic Palette</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-neutral-800 mb-1">Ghi chú</label>
+                  <input type="text" placeholder="Ghi chú (loại da, tone da cần tư vấn...)" class="w-full px-4 py-2 rounded-xl bg-white border border-neutral-300 text-xs outline-none focus:border-amber-500">
+                </div>
+                <button type="submit" class="w-full py-3 bg-[#E36609] hover:bg-[#CF5A04] text-white font-extrabold text-sm rounded-xl shadow-lg transition">
+                  Nhận tư vấn
+                </button>
+              </form>
+            </div>
+
+            <!-- Countdown Timer Clock (Picture6) -->
+            <div class="lg:col-span-3 flex flex-col items-center justify-center text-center p-4">
+              <h4 class="text-xl font-serif italic text-amber-900 font-bold mb-4">
+                Thời gian khuyến mãi chỉ còn
+              </h4>
+              <div class="grid grid-cols-4 gap-2 w-full max-w-xs">
+                <div class="flex flex-col items-center">
+                  <div id="timerDays" class="w-14 h-16 bg-black text-white rounded-xl shadow flex items-center justify-center text-2xl font-black font-mono">
+                    01
+                  </div>
+                  <span class="text-[11px] font-bold text-neutral-800 mt-1">Ngày</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div id="timerHours" class="w-14 h-16 bg-black text-white rounded-xl shadow flex items-center justify-center text-2xl font-black font-mono">
+                    08
+                  </div>
+                  <span class="text-[11px] font-bold text-neutral-800 mt-1">Giờ</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div id="timerMinutes" class="w-14 h-16 bg-black text-white rounded-xl shadow flex items-center justify-center text-2xl font-black font-mono">
+                    20
+                  </div>
+                  <span class="text-[11px] font-bold text-neutral-800 mt-1">Phút</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div id="timerSeconds" class="w-14 h-16 bg-black text-white rounded-xl shadow flex items-center justify-center text-2xl font-black font-mono text-amber-400">
+                    21
+                  </div>
+                  <span class="text-[11px] font-bold text-neutral-800 mt-1">Giây</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7: SALES POLICIES (Picture5.png) -->
+      <section id="policy" class="py-16 sm:py-20 bg-[#F7F2E8] border-t border-neutral-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-neutral-900 font-display tracking-tight uppercase">
+              CHÍNH SÁCH BÁN HÀNG
+            </h2>
+            <p class="text-sm sm:text-base text-neutral-700 mt-2 font-medium">
+              Cam kết mang đến trải nghiệm mua sắm an tâm cho khách hàng.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="flex flex-col items-center text-center p-4">
+              <div class="w-16 h-16 rounded-2xl bg-black text-white flex items-center justify-center mb-4 text-2xl shadow-sm">
+                🛒
+              </div>
+              <h3 class="text-sm font-black text-neutral-900 mb-2">SẢN PHẨM LỖI</h3>
+              <p class="text-xs text-neutral-700 leading-relaxed max-w-xs">
+                Hỗ trợ khi sản phẩm có lỗi phát sinh từ Nhà sản xuất. Vui lòng phản hồi trong vòng 48h kể từ khi nhận hàng.
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center text-center p-4">
+              <div class="w-16 h-16 rounded-2xl bg-black text-white flex items-center justify-center mb-4 text-2xl shadow-sm">
+                🚚
+              </div>
+              <h3 class="text-sm font-black text-neutral-900 mb-2">VẬN CHUYỂN</h3>
+              <p class="text-xs text-neutral-700 leading-relaxed max-w-xs">
+                Hỗ trợ đổi với sản phẩm bị ảnh hưởng trong quá trình vận chuyển.
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center text-center p-4">
+              <div class="w-16 h-16 rounded-2xl bg-black text-white flex items-center justify-center mb-4 text-2xl shadow-sm">
+                🛡
+              </div>
+              <h3 class="text-sm font-black text-neutral-900 mb-2">GIAO SAI/THIẾU SẢN PHẨM</h3>
+              <p class="text-xs text-neutral-700 leading-relaxed max-w-xs">
+                Lemonade hỗ trợ khi sản phẩm nhận được không đúng hoặc thiếu so với đơn hàng đã đặt.
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center text-center p-4">
+              <div class="w-16 h-16 rounded-2xl bg-black text-white flex items-center justify-center mb-4 text-2xl shadow-sm">
+                📞
+              </div>
+              <h3 class="text-sm font-black text-neutral-900 mb-2">Phản hồi trong 48h</h3>
+              <p class="text-xs text-neutral-700 leading-relaxed max-w-xs">
+                Đối với lỗi từ Nhà sản xuất, khách hàng vui lòng phản hồi không quá 48h kể từ khi nhận hàng.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 8: FOOTER (Picture7.png) -->
+      <footer class="bg-[#2D2E30] text-neutral-300 pt-16 pb-12 border-t border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pb-12 border-b border-neutral-700">
+            <!-- Left Info -->
+            <div class="space-y-4">
+              <h3 class="text-xl sm:text-2xl font-black text-white font-display tracking-wider uppercase">
+                LEMONADE COSMETICS
+              </h3>
+              <p class="text-sm font-semibold text-neutral-300">Lemonade Cosmetics</p>
+              <p class="text-xs text-neutral-400">Giải pháp trang điểm dễ dàng cho phụ nữ Việt</p>
+
+              <div class="space-y-2 text-xs sm:text-sm">
+                <div>📞 <strong>Hotline:</strong> 0987 272 212</div>
+                <div>✉️ <strong>Email:</strong> lemonade01@lemonade.vn</div>
+                <div>🌐 <strong>Website:</strong> lemonade.vn</div>
+                <div>💬 <strong>Zalo:</strong> Lemonade Cosmetics</div>
+              </div>
+
+              <p class="text-xs text-neutral-400 leading-relaxed pt-2 border-t border-neutral-700 max-w-md">
+                Lemonade xác nhận các kênh hỗ trợ gồm hotline, email và Zalo OA; thời gian hỗ trợ là 8:00–17:30 các ngày trong tuần.
+              </p>
+            </div>
+
+            <!-- Right Links -->
+            <div class="space-y-4 md:pl-8">
+              <h3 class="text-xl sm:text-2xl font-black text-white font-display tracking-wider uppercase">
+                CHĂM SÓC KHÁCH HÀNG
+              </h3>
+              <ul class="space-y-2.5 text-xs sm:text-sm text-neutral-300">
+                <li><a href="#policy" class="hover:text-[#FFE500] transition">Chính sách đổi trả</a></li>
+                <li><a href="#policy" class="hover:text-[#FFE500] transition">Chính sách giao hàng</a></li>
+                <li><a href="#policy" class="hover:text-[#FFE500] transition">Chính sách bảo mật</a></li>
+                <li><a href="#membership" class="hover:text-[#FFE500] transition">Chính sách thành viên</a></li>
+                <li><a href="#consultation" class="hover:text-[#FFE500] transition">Chính sách bán sỉ &amp; đại lý</a></li>
+                <li><a href="#consultation" class="hover:text-[#FFE500] transition">Liên hệ</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-8 text-center text-xs text-neutral-500">
+            <p>© 2026 Lemonade Cosmetics. Thương hiệu sáng lập bởi Makeup Artist Quách Ánh. Tất cả quyền được bảo lưu.</p>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- Standalone Script for GitHub Pages & Offline Browsers -->
+    <script>
+      // Live countdown timer script
+      let d = 1, h = 8, m = 20, s = 21;
+      setInterval(() => {
+        if (s > 0) s--;
+        else {
+          s = 59;
+          if (m > 0) m--;
+          else {
+            m = 59;
+            if (h > 0) h--;
+            else {
+              h = 23;
+              if (d > 0) d--;
+            }
+          }
+        }
+        const setTxt = (id, val) => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = val < 10 ? '0' + val : val;
+        };
+        setTxt('timerDays', d);
+        setTxt('timerHours', h);
+        setTxt('timerMinutes', m);
+        setTxt('timerSeconds', s);
+      }, 1000);
+
+      // Copy voucher handler
+      function copyVoucher(code) {
+        try {
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(code);
+          }
+        } catch(e) {}
+        alert('Đã sao chép mã voucher: ' + code);
+      }
+
+      // Consultation form submit handler
+      function handleFormSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('custName')?.value || 'Quý khách';
+        const phone = document.getElementById('custPhone')?.value || '';
+        alert('Cảm ơn bạn ' + name + ' (' + phone + ')! Chuyên viên Lemonade sẽ liên hệ tư vấn và gửi quà tặng qua Zalo/SĐT trong 15-30 phút tới.');
+      }
+    </script>
+
+    <!-- Optional Vite Hydration when running in development server -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
